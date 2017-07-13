@@ -8,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   users: any;
-  title = 'app';
+  
+  loadingIndicator: boolean = true;
+  reorderable: boolean = true;
+
+  columns = [
+    { prop: 'name' },
+    { name: 'Username' },
+    { name: 'Email' }
+  ];
 
   constructor (private userService: UserService) {}
 
